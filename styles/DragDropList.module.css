@@ -1,0 +1,15 @@
+.list {
+  flex: 0 0 300px;
+  background: #ebecf0;
+  border-radius: 3px;
+  padding: 6px 10px;
+  margin-right: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.title {
+  font-size: 15px;
+  line-height: 30px;
+  margin-bottom: 6px;
+}

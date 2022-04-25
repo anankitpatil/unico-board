@@ -1,0 +1,38 @@
+.card {
+  display: block;
+  padding: 12px 6px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.label {
+  display: block;
+  width: 90px;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.red {
+  background: #FF0000;
+}
+
+.blue {
+  background: #0000FF;
+}
+
+.black {
+  background: #000;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 12px 0 0;
+}

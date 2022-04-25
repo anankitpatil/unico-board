@@ -1,0 +1,88 @@
+.container {
+  position: absolute;
+  background: #FFF;
+  border-radius: 3px;
+  padding: 10px;
+  width: 450px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header {
+  font-size: 15px;
+  line-height: 36px;
+  text-align: center;
+  border-bottom: 1px solid #CCC;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.form {
+  padding-top: 6px;
+  overflow: auto;
+}
+
+.form label {
+  font-size: 12px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+.form input, .form textarea {
+  font-size: 14px;
+  padding: 10px 12px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #CCC;
+  border-radius: 3px;
+}
+
+.form input:hover, .form textarea:hover {
+  background: #ebecf0;
+  box-shadow: inset 0 0 0 2px #dfe1e6;
+}
+
+.form input:focus, .form textarea:focus {
+  background: #FFF;
+  box-shadow: inset 0 0 0 2px #0079bf;
+}
+
+.form p {
+  color: #FF0000;
+  font-size: 10px;
+  font-weight: 300;
+  right: 10px;
+  position: absolute;
+  margin-top: 0;
+}
+
+.form p:last-of-type {
+  margin-top: -4px;
+}
+
+.form button {
+  float: right;
+  background: #0279c0;
+  padding: 0 12px;
+  line-height: 36px;
+  border-radius: 3px;
+  color: #FFF;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  opacity: .9;
+}
+
+@media (max-width: 548px) {
+  .container {
+    width: calc(100vw - 30px);
+    left: 0 !important;
+  }
+}

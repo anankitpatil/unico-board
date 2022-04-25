@@ -1,0 +1,26 @@
+.menu {
+  display: block;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  background: #FFF;
+  height: 100vh;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.closed {
+  right: -300px;
+}
+
+.open {
+  right: 0px;
+}
+
+.header {
+  color: #172b4d;
+  border-bottom: 1px solid #CCC;
+  line-height: 48px;
+  text-align: center;
+  display: block;
+  position: relative;
+}
