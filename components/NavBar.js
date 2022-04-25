@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { BiListPlus, BiDotsHorizontalRounded } from "react-icons/bi";
 import AddDialog from "../components/AddDialog";
+import { getBrowser } from "../helpers/functions";
 import styles from "../styles/NavBar.module.css";
 
 export default function NavBar({ addCard, toggleMenu }) {
@@ -11,7 +12,9 @@ export default function NavBar({ addCard, toggleMenu }) {
   const handleResize = () => {
     let pos = {};
     pos.top = addRef.current.getBoundingClientRect().bottom - 6;
-    pos.left = addRef.current.getBoundingClientRect().left - 69;
+    if (getBrowser() === "Safari")
+      pos.left = addRef.current.getBoundingClientRect().left - 52;
+    else pos.left = addRef.current.getBoundingClientRect().left - 15;
     setPosition(pos);
   };
 
