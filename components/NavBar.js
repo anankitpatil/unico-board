@@ -4,9 +4,10 @@ import AddDialog from "../components/AddDialog";
 import { getBrowser } from "../helpers/functions";
 import styles from "../styles/NavBar.module.css";
 
-export default function NavBar({ addCard, toggleMenu }) {
+export default function NavBar({ addCard, toggleMenu, getSearchQuery }) {
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [position, setPosition] = useState(false);
+  const [query, setQuery] = useState("");
   const addRef = useRef(null);
 
   const handleResize = () => {
@@ -31,6 +32,10 @@ export default function NavBar({ addCard, toggleMenu }) {
     };
   }, []);
 
+  useEffect(() => {
+    getSearchQuery(query);
+  }, [query]);
+
   return (
     <nav className={styles.nav}>
       <div className={styles.left}>
@@ -48,6 +53,13 @@ export default function NavBar({ addCard, toggleMenu }) {
         )}
       </div>
       <div className={styles.right}>
+        <input
+          type="text"
+          className={styles.search}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search board name or label"
+        />
         <a href="#" className="btn" onClick={toggleMenu}>
           <BiDotsHorizontalRounded size={24} /> Show menu
         </a>
